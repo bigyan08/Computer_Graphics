@@ -55,7 +55,6 @@ void display() {
 void init() {
     glClearColor(0.0, 0.0, 0.0, 0.0);  // black background
     glColor3f(1.0, 1.0, 1.0);          // drawing color
-
     glPointSize(2.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -65,16 +64,13 @@ void init() {
 int main(int argc, char** argv) {
     printf("Enter center (xc yc) and radius r: ");
     scanf("%d %d %d", &xc, &yc, &r);
-
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize(800, 800);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("Midpoint Circle Algorithm");
-
     init();
     glutDisplayFunc(display);
     glutMainLoop();
-
     return 0;
 }
